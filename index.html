@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090a10">
+<title>Nauell Memories</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
+<script defer src="app.js"></script>
+</head>
+<body>
+<header>
+  <div class="logo">N <span>Nauell <i>Memories</i></span></div>
+  <button id="adminOpen">Admin</button>
+</header>
+
+<section class="hero">
+  <p>OUR LITTLE ARCHIVE</p>
+  <h1>Every picture holds<br><i>a piece of us.</i></h1>
+  <p class="sub">Kumpulan momen kecil yang ingin selalu kita ingat.</p>
+  <span id="count">Memuat kenangan...</span>
+</section>
+
+<main>
+  <div class="heading">
+    <div><small>THE COLLECTION</small><h2>Our Memories</h2></div>
+    <button id="refresh">Refresh ↻</button>
+  </div>
+  <div id="gallery" class="gallery">Memuat foto...</div>
+  <p id="error"></p>
+</main>
+
+<dialog id="viewer">
+  <button id="closeViewer">×</button>
+  <img id="bigImage">
+  <h3 id="bigTitle"></h3>
+  <p id="bigCaption"></p>
+  <p id="bigDate"></p>
+</dialog>
+
+<dialog id="admin">
+  <button id="closeAdmin">×</button>
+  <h2>Admin Album</h2>
+  <form id="loginForm">
+    <input id="email" type="email" placeholder="Email admin" required>
+    <input id="password" type="password" placeholder="Password" required>
+    <button>Login</button>
+  </form>
+  <div id="uploadPanel" hidden>
+    <p id="adminEmail"></p>
+    <button id="logout">Logout</button>
+    <form id="uploadForm">
+      <input id="photo" type="file" accept="image/jpeg,image/png,image/webp" required>
+      <input id="title" placeholder="Judul foto">
+      <input id="date" type="date">
+      <textarea id="caption" placeholder="Cerita kenangan..."></textarea>
+      <button>Unggah Foto ❤️</button>
+    </form>
+  </div>
+  <p id="status"></p>
+</dialog>
+</body>
+</html>

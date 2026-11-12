@@ -1,0 +1,30 @@
+*{box-sizing:border-box}
+body{margin:0;background:#090a10;color:#eee;font-family:'DM Sans',sans-serif}
+header{height:70px;padding:0 7%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #24232b}
+.logo{font-weight:bold;letter-spacing:1px}.logo span{margin-left:8px}
+i{color:#d6a9b9;font-family:'Playfair Display',serif}
+button{background:#d6a9b9;border:0;padding:10px 17px;border-radius:5px;cursor:pointer;color:#171018;font-weight:600}
+.hero{text-align:center;padding:85px 15px 75px}
+.hero>p:first-child,small{font-size:10px;letter-spacing:4px;color:#d6a9b9}
+h1{font:clamp(42px,8vw,72px)/1.15 'Playfair Display',serif;margin:25px 0}
+.sub{color:#aaa;font-size:13px;margin-bottom:28px}
+#count{font-size:11px;color:#a9c6ad}
+main{max-width:1100px;margin:auto;padding:20px}
+.heading{display:flex;justify-content:space-between;align-items:center;margin-bottom:25px}
+h2{font:30px 'Playfair Display',serif;margin:8px 0}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.photo{border:1px solid #292631;border-radius:5px;overflow:hidden;cursor:pointer;background:#15141d}
+.photo img{width:100%;height:260px;object-fit:cover;display:block}
+.photo div{padding:13px}
+.photo h3{font:18px 'Playfair Display',serif;margin:0 0 5px}
+.photo p{font-size:10px;color:#aaa;margin:0}
+dialog{background:#15141d;color:white;border:1px solid #48404c;border-radius:9px;width:min(430px,92%);padding:25px}
+dialog::backdrop{background:#000d;backdrop-filter:blur(5px)}
+dialog>button:first-child{float:right}
+dialog input,dialog textarea{width:100%;padding:12px;margin:7px 0;background:#090a10;border:1px solid #393440;color:white;border-radius:4px}
+dialog form button{width:100%;margin-top:10px}
+#viewer{text-align:center}
+#bigImage{width:100%;max-height:65vh;object-fit:contain}
+#bigCaption,#bigDate{color:#aaa;font-size:12px}
+#error,#status{font-size:12px;color:#e7a0a0}
+@media(max-width:650px){.gallery{grid-template-columns:repeat(2,1fr);gap:9px}.photo img{height:190px}header{padding:0 18px}.hero{padding-top:65px}}
