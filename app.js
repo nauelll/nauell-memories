@@ -165,7 +165,7 @@ function showAdmin(session) {
   currentSession = session;
   $('loginForm').hidden = !!session;
   $('uploadPanel').hidden = !session;
-  $('adminEmail').textContent = session?.user?.email || '';
+  $('adminEmail').textContent = session ? 'Admin terverifikasi' : '';
   loadPhotos();
 }
 
