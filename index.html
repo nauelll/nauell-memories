@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#090a10">
-<title>Nauell Memories</title>
+<title>Nopal & Elisa | Our Beautiful Memories</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
@@ -13,20 +13,33 @@
 </head>
 <body>
 <header>
-  <div class="logo">N <span>Nauell <i>Memories</i></span></div>
+  <div class="logo">♡ <span>Nopal <i>& Elisa</i></span></div>
   <button id="adminOpen">Admin</button>
 </header>
 
 <section class="hero">
-  <p>OUR LITTLE ARCHIVE</p>
-  <h1>Every picture holds<br><i>a piece of us.</i></h1>
-  <p class="sub">Kumpulan momen kecil yang ingin selalu kita ingat.</p>
+  <p>N O P A L  ♡  E L I S A</p>
+  <h1>Nopal <i>♡</i> Elisa<br><i>Our Little Memories</i></h1>
+  <p class="sub">Two hearts, one story. Selamanya dalam setiap kenangan.</p>
   <span id="count">Memuat kenangan...</span>
 </section>
 
+
+<div id="musicBar" hidden>
+  <div class="music-info">
+    <span class="music-icon">♫</span>
+    <div>
+      <strong id="musicTitle">Our Love Song</strong>
+      <small>Nopal ♡ Elisa</small>
+    </div>
+  </div>
+  <button id="musicToggle" type="button">▶</button>
+  <audio id="musicAudio" preload="none"></audio>
+</div>
+
 <main>
   <div class="heading">
-    <div><small>THE COLLECTION</small><h2>Our Memories</h2></div>
+    <div><small>OUR LOVE STORY</small><h2>Our Beautiful Memories</h2></div>
     <button id="refresh">Refresh ↻</button>
   </div>
   <div id="gallery" class="gallery">Memuat foto...</div>
@@ -59,6 +72,16 @@
       <textarea id="caption" placeholder="Cerita kenangan..."></textarea>
       <button>Unggah Foto ❤️</button>
     </form>
+
+    <hr>
+    <h3>🎵 Musik Kenangan</h3>
+    <form id="musicForm">
+      <input id="musicName" type="text" placeholder="Judul lagu" required>
+      <input id="musicFile" type="file" accept=".mp3,audio/mpeg" required>
+      <button type="submit">Unggah Musik ♡</button>
+    </form>
+    <button id="deleteMusic" type="button">Hapus Musik</button>
+    <p id="musicStatus"></p>
   </div>
   <p id="status"></p>
 </dialog>
